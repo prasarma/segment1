@@ -1,0 +1,9 @@
+import 'controller/about_insta_od_controller.dart';import 'package:flutter/material.dart';import 'package:pra_s_application5/core/app_export.dart';
+// ignore_for_file: must_be_immutable
+class AboutInstaOdBottomsheet extends StatelessWidget {AboutInstaOdBottomsheet(this.controller);
+
+AboutInstaOdController controller;
+
+@override Widget build(BuildContext context) { return SingleChildScrollView(child: Container(width: double.maxFinite, child: Container(width: double.maxFinite, padding: getPadding(left: 18, top: 17, right: 18, bottom: 17), decoration: AppDecoration.fillWhiteA700.copyWith(borderRadius: BorderRadiusStyle.customBorderTL20), child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.start, children: [Align(alignment: Alignment.centerRight, child: Row(mainAxisAlignment: MainAxisAlignment.end, crossAxisAlignment: CrossAxisAlignment.start, children: [Padding(padding: getPadding(top: 8), child: Text("lbl_instant".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtHelveticaNeueBold18Bluegray800)), CustomImageView(svgPath: ImageConstant.imgCloseBlueGray80001, height: getSize(15), width: getSize(15), margin: getMargin(left: 117, bottom: 15), onTap: () {onTapImgClose();})])), Container(width: getHorizontalSize(248), margin: getMargin(left: 15, top: 24, right: 60), child: RichText(text: TextSpan(children: [TextSpan(text: "msg_end_to_end_online2".tr, style: TextStyle(color: ColorConstant.blueGray80001, fontSize: getFontSize(14), fontFamily: 'Abel', fontWeight: FontWeight.w400)), TextSpan(text: "msg_for_select_en".tr, style: TextStyle(color: ColorConstant.blueGray80001, fontSize: getFontSize(12), fontFamily: 'Abel', fontWeight: FontWeight.w400))]), textAlign: TextAlign.left))])))); } 
+onTapImgClose() { Get.back(); } 
+ }
